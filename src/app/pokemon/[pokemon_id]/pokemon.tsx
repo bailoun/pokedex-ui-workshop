@@ -32,7 +32,7 @@ export default function PokemonComponent(props: Props) {
                 </Col>
             </Row>
             <Tabs defaultActiveKey={"pokemon-stats"} id={"pokemon-stats-id"} className="mb-3">
-                <Tab eventKey={"pokemon-stats"} title={"Pokemon Stats"}>
+                <Tab eventKey={"pokémon-stats"} title={"Pokémon Stats"}>
                     <Row>
                         <Col xs={1}>Speed:</Col>
                         <Col><ProgressBar variant="info" animated now={pokemon.speed} label={pokemon.speed} /></Col>
@@ -50,10 +50,10 @@ export default function PokemonComponent(props: Props) {
                         <Col><ProgressBar variant="success" animated now={pokemon.defense} label={pokemon.defense} /></Col>
                     </Row>
                 </Tab>
-                <Tab eventKey={"pokemon-type"} title={"Pokemon Type"}>
+                <Tab eventKey={"pokemon-type"} title={"Pokémon Type"}>
                     <Row className="m-2">
                         <Card className="p-0">
-                            <Card.Header>Pokemon type</Card.Header>
+                            <Card.Header>Pokémon type</Card.Header>
                             <ListGroup variant="flush">
                                 {pokemon.pokemonType.map(type => <ListGroup.Item key={pokemon.pokemonNumber}>{type}</ListGroup.Item>)}
                             </ListGroup>
@@ -63,7 +63,7 @@ export default function PokemonComponent(props: Props) {
                 <Tab eventKey={"evolution-family"} title={"Evolution Family"}>
                     <Row className="m-2">
                         <Card className="p-0">
-                            <Card.Header>Evaluation family</Card.Header>
+                            <Card.Header>Evolution family</Card.Header>
                             <ListGroup variant="flush">
                                 {pokemon.evolutionFamily.map(evolution => <ListGroup.Item key={pokemon.pokemonNumber}>{evolution} {getFamilyTag(pokemon, evolution)}</ListGroup.Item>)}
                             </ListGroup>

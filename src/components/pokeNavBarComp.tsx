@@ -11,10 +11,10 @@ export default function PokeNavBarComp() {
        <>
            <Navbar bg="dark" data-bs-theme="dark">
                <Container>
-                   <Navbar.Brand href='/'>Pokedex</Navbar.Brand>
+                   <Navbar.Brand href='/'>Pokédex</Navbar.Brand>
                    <Nav className="me-auto">
                        <Nav.Link href='/'>Home</Nav.Link>
-                       <Nav.Link href='/'>Pokemon</Nav.Link>
+                       <Nav.Link href='/'>Pokémon</Nav.Link>
                    </Nav>
                </Container>
            </Navbar>
