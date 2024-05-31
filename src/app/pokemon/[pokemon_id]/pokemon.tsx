@@ -60,7 +60,7 @@ export default function PokemonComponent(props: Props) {
                         </Card>
                     </Row>
                 </Tab>
-                <Tab eventKey={"evoluation-family"} title={"Evoluation Family"}>
+                <Tab eventKey={"evolution-family"} title={"Evolution Family"}>
                     <Row className="m-2">
                         <Card className="p-0">
                             <Card.Header>Evaluation family</Card.Header>
