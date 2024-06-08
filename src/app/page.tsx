@@ -17,8 +17,8 @@ export default function Home() {
           <Row className="justify-content-center">
             <Col xs={6} md={6} lg={6} xl={6} className="text-center" style={{ marginTop: '7rem' }}>
               <Image src="/images/pokedex-label.png" rounded />
-              <h1>Discover the world of Pokémon with my Pokedex...</h1>
-              <Link href="/pokemon_list" passHref>
+              <h1>Discover the world of Pokémon with my Pokédex...</h1>
+              <Link href="/pokemonlist" passHref>
                 <Button variant="warning" style={{ marginTop: '1rem' }}>
                   Go to Pokémon Page!
                 </Button>
