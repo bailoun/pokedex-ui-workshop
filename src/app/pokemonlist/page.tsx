@@ -41,7 +41,7 @@ export default function PokemonList() {
            <Spinner className='p-2' animation='border' role='status' />
          </Row>
          <Row className="justify-content-md-center p-2">
-           Loading Pokémons...
+           Loading Pokémon...
          </Row>
        </Container>
      }
