@@ -19,35 +19,35 @@ export default function PokemonComponent(props: Props) {
           return <Badge bg="success">Evolution</Badge>
         }
         return <></>
-      }
+    }
     
     return (
         <Container>
-            <Row className="justify-content-md-center">
-                <Col md="auto"><h1>{pokemon.pokemonName}</h1></Col>
-            </Row>
             <Row>
-                <Col className="d-flex justify-content-md-center">
-                    <Image src={pokemon.mainImage} rounded thumbnail fluid style={{width:'20vw', height:'40vh'}}/>
+                <Col className="text-center"><h1>{pokemon.pokemonName}</h1></Col>
+            </Row>
+            <Row className="justify-content-center">
+                <Col xs={12} md={6} className="text-center">
+                    <Image src={pokemon.mainImage} rounded fluid style={{ maxWidth: '80vw', maxHeight: '50vh' }} />
                 </Col>
             </Row>
             <Tabs defaultActiveKey={"pokemon-stats"} id={"pokemon-stats-id"} className="mb-3">
-                <Tab eventKey={"pokémon-stats"} title={"Pokémon Stats"}>
+                <Tab eventKey={"pokemon-stats"} title={"Pokémon Stats"}>
                     <Row>
-                        <Col xs={1}>Speed:</Col>
-                        <Col><ProgressBar variant="info" animated now={pokemon.speed} label={pokemon.speed} /></Col>
+                        <Col xs={6} md={2}>Speed:</Col>
+                        <Col xs={6} md={4}><ProgressBar variant="info" animated now={pokemon.speed} label={pokemon.speed} /></Col>
                     </Row>
                     <Row>
-                        <Col xs={1}>Health points: </Col>
-                        <Col><ProgressBar variant="danger" animated now={pokemon.healthPoints} label={pokemon.healthPoints} /></Col>
+                        <Col xs={6} md={2}>Health:</Col>
+                        <Col xs={6} md={4}><ProgressBar variant="danger" animated now={pokemon.healthPoints} label={pokemon.healthPoints} /></Col>
                     </Row>
                     <Row>
-                        <Col xs={1}>Attack: </Col>
-                        <Col><ProgressBar variant="warning" animated now={pokemon.attack} label={pokemon.attack} /></Col>
+                        <Col xs={6} md={2}>Attack:</Col>
+                        <Col xs={6} md={4}><ProgressBar variant="warning" animated now={pokemon.attack} label={pokemon.attack} /></Col>
                     </Row>
                     <Row>
-                        <Col xs={1}>Defense: </Col>
-                        <Col><ProgressBar variant="success" animated now={pokemon.defense} label={pokemon.defense} /></Col>
+                        <Col xs={6} md={2}>Defense:</Col>
+                        <Col xs={6} md={4}><ProgressBar variant="success" animated now={pokemon.defense} label={pokemon.defense} /></Col>
                     </Row>
                 </Tab>
                 <Tab eventKey={"pokemon-type"} title={"Pokémon Type"}>
@@ -55,7 +55,7 @@ export default function PokemonComponent(props: Props) {
                         <Card className="p-0">
                             <Card.Header>Pokémon type</Card.Header>
                             <ListGroup variant="flush">
-                                {pokemon.pokemonType.map(type => <ListGroup.Item key={pokemon.pokemonNumber}>{type}</ListGroup.Item>)}
+                                {pokemon.pokemonType.map(type => <ListGroup.Item key={type}>{type}</ListGroup.Item>)}
                             </ListGroup>
                         </Card>
                     </Row>
@@ -70,7 +70,6 @@ export default function PokemonComponent(props: Props) {
                         </Card>
                     </Row>
                 </Tab>
-                
             </Tabs>
         </Container>
     )
