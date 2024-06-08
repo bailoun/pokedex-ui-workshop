@@ -3,7 +3,7 @@ import PokemonsComp from "@/components/pokemonsComp";
 import PokeNavBar from "@/components/pokeNavBarComp";
 import PokemonCard from "@/model/pokemonCard";
 import { useEffect, useState } from "react";
-import { Container, Row, Spinner } from "react-bootstrap";
+import { Container, Row, Spinner, Col } from "react-bootstrap";
 
 
 export default function PokemonList() {
@@ -37,13 +37,13 @@ export default function PokemonList() {
      {pokemons ?
        <PokemonsComp pokemons={pokemons}></PokemonsComp> :
        <Container>
-         <Row className="justify-content-md-center p-2">
-           <Spinner className='p-2' animation='border' role='status' />
-         </Row>
-         <Row className="justify-content-md-center p-2">
-           Loading Pokémon...
-         </Row>
-       </Container>
+            <Row className="justify-content-center">
+                <Col xs="auto" className="text-center">
+                    <Spinner className='p-2' animation='border' role='status' />
+                    <p>Loading Pokémon...</p>
+                </Col>
+            </Row>
+        </Container>
      }
    </>
  );
