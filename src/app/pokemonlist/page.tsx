@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { Container, Row, Spinner } from "react-bootstrap";
 
 
-export default function pokemon_list() {
+export default function PokemonList() {
 
 
  const [pokemons, setPokemons] = useState<PokemonCard[]>();

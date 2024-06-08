@@ -12,7 +12,7 @@ export default function PokeNavBarComp() {
                    <Navbar.Brand href='/'>Pokédex</Navbar.Brand>
                    <Nav className="me-auto">
                        <Nav.Link href='/'>Home</Nav.Link>
-                       <Nav.Link href='/pokemon_list'>Pokémon</Nav.Link>
+                       <Nav.Link href='/pokemonlist'>Pokémon</Nav.Link>
                    </Nav>
                </Container>
            </Navbar>
