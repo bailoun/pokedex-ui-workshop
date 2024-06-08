@@ -18,11 +18,13 @@ export default function Home() {
             <Col xs={6} md={6} lg={6} xl={6} className="text-center" style={{ marginTop: '7rem' }}>
               <Image src="/images/pokedex-label.png" rounded />
               <h1>Discover the world of Pokémon with my Pokédex...</h1>
-              <Link href="/pokemonlist" passHref>
-                <Button variant="warning" style={{ marginTop: '1rem' }}>
-                  Go to Pokémon Page!
-                </Button>
-              </Link>
+              <div style={{ marginTop: '1rem' }}>
+                <Link href="/pokemonlist" passHref>
+                  <Button variant="warning" size="lg">
+                    Go to Pokémon Page!
+                  </Button>
+                </Link>
+              </div>
             </Col>
           </Row>
         </Container>
