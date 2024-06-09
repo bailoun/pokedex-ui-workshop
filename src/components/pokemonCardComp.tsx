@@ -13,7 +13,6 @@ interface PokemonCardCompProps {
 
 export default function PokemonCardComp(props: PokemonCardCompProps) {
 
-
    const pokemonUrl = `/pokemon/${props.pokemon.pokemonNumber}`;
 
 
