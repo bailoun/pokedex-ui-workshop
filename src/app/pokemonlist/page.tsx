@@ -42,8 +42,8 @@ export default function PokemonList() {
     <>
       <PokeNavBar />
       {loading ? (
-        <Container>
-          <Row className="justify-content-center">
+        <Container fluid style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '92vh' }}>
+          <Row>
             <Col xs="auto" className="text-center">
               <Spinner className='p-2' animation='border' role='status' />
               <p>Loading Pokémon...</p>
@@ -54,8 +54,8 @@ export default function PokemonList() {
         <>
           <PokemonsComp pokemons={pokemons} />
           {nextToken && (
-            <Container className="py-5">
-              <Row className="justify-content-center">
+            <Container fluid className="py-5" style={{ display: 'flex', justifyContent: 'center' }}>
+              <Row>
                 <Col xs="auto">
                   <Button variant="primary" onClick={() => fetchPokemons(nextToken)}>
                     More Pokémon!
